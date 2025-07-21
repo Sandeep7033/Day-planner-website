@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Day Planner</title>
+  <link rel="stylesheet" href="sandeep.css"/>
+</head>
+<body>
+
+  <div id="authSection">
+    <div class="auth-box">
+      <h2 id="authTitle">Login</h2>
+      <input type="text" id="authUsername" placeholder="Username" />
+      <input type="password" id="authPassword" placeholder="Password" />
+      <button id="authAction">Login</button>
+      <p id="toggleAuth">Don't have an account? <a href="#" onclick="toggleAuthMode()">Sign up</a></p>
+    </div>
+  </div>
+
+  <div id="appSection" style="display:none;">
+    <header class="hero">
+      <div class="hero-content">
+        <h1>📝 Smart Day Planner</h1>
+        <p>Welcome, <span id="displayUser"></span></p>
+        <span id="liveDate"></span>
+      </div>
+      <img src="https://thumbs.wbm.im/pw/small/b889512a1be138a8ef2f6f813347eb71.png" alt="Planner" class="hero-img" />
+    </header>
+
+    <section class="form-section">
+      <input type="text" id="taskTitle" placeholder="Enter task..." />
+      <input type="time" id="taskTime" />
+      <input type="date" id="taskDate" />
+      <button id="addTask"> Add Task </button>
+    </section>
+
+    <main id="taskList" class="task-list"></main>
+
+    <div class="footer">
+      <button id="logoutBtn">  Logout</button>
+      <button id="clearAll"> Clear All Tasks</button>
+    </div>
+  </div>
+
+  <script src="sandeep.js"></script>
+</body>
+</html>
